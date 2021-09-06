@@ -1,0 +1,22 @@
+.card{
+margin-top: 10px;
+margin-bottom: 10px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+img{
+    height: 300px;
+    width: 300px;
+}
+}
+
+.card-item{
+    border: 1px solid black;
+    margin-bottom: 5px;
+    padding: 8px;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 17px;
+}
+
+ 
