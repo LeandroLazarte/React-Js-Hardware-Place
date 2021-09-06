@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.scss'
 
-const Card = ({src, title, description, price,}) =>{
+const Card = ({src, title, description, price}) =>{
     return(
         <div className="card-item">
             <img src={src} alt="Imagen Card"/>
