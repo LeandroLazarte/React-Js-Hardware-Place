@@ -4,4 +4,9 @@ h1 {
   color: chocolate;
   text-decoration: underline;
 }
+
+img {
+  height: 250px;
+  width: 250px;
+}
 /*# sourceMappingURL=ItemListContainer.css.map */
