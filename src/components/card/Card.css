@@ -1,5 +1,5 @@
 .card {
-  margin-top: 10px;
+  margin-top: 30px;
   margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,17 +13,24 @@
           justify-content: space-between;
 }
 
-.card img {
-  height: 300px;
-  width: 300px;
-}
-
 .card-item {
+  margin-top: 15px;
   border: 1px solid black;
   margin-bottom: 5px;
   padding: 8px;
   text-align: center;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   font-size: 17px;
+  padding: 20px;
+}
+
+.img-product {
+  border: 1px solid #000;
+}
+
+.button {
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 /*# sourceMappingURL=Card.css.map */
