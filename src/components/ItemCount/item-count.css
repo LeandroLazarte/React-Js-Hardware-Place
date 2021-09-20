@@ -2,13 +2,24 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 50px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 20px;
   position: relative;
+  font-size: 20px;
 }
 
 .item-count .count {
   border: 1px solid black;
-  padding: 5px;
+  padding: 10px;
   margin-right: 10px;
 }
 /*# sourceMappingURL=item-count.css.map */

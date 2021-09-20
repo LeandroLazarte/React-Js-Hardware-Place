@@ -1,28 +1,35 @@
-// import React from 'react'
+import * as React from "react";
 
-// const CardContainer = () =>{
-//  const [pokemon, setPokemon] = React.useState([]);
+const CardContainer =() =>{
+    const [Pokemon, setPokemon] =React.useState([]);
+    
+    React.useEffect(() => {
+    const url = "https://pokeapi.co/api/v2/pokemon?limit=20";
+    
+    fetch(url)
+    .then((response) => {
+    if (response.ok) {
+        return response.json();
+    } else {
+        throw response;
+    }
+    })
+    .then((data) => setPokemon(data.results))
+    .catch((error) => console.log(`Se ha detectado un error, ${error.status}`));
+    },[])
+    
+    
+    return(
+        <div style={{display: 'flex', justifyContent:"space-between"}}>{
+        {Pokemon?.map(pokemon =>{
+            return (
+            <p
+            Pokemon={Pokemon.name}
+            />
+            )
+        )}
+        </div>
+    )
+}
 
-// React.useEffect(() => {
-//     const url = "https://pokeapi.co/api/v2/pokemon?limit=30";
-//   fetch(url)
-//   .then((Response) => {
-//     if (Response.ok) {
-//         return Response.json()
-//     } else {
-//         throw Response
-//     }
-//   })
-//   .then((data => setPokemon(data.results))
-//   .catch((error =>console.log(`Se rompio la paginita ${error.status}`, error))
-// }, [])
-
-// return(
-//     <div style= {{display:"flex", justifyContent:"space-between"}}>
-//     {Pokemon?.map(pokemon =>{
-//         return <p>{pokemon.name}</p>
-//     })}
-//     </div>)
-// }
-
-// export default CardContainer
+export default CardContainer;

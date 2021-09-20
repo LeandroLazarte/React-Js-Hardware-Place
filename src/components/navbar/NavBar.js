@@ -13,7 +13,7 @@ const handelClick = () =>{
     setIsLoggedIn(true)
   }
 }
-        return( <Navbar className="NavBar" bg="dark" variant={"dark"} expand="xl">
+        return( <Navbar className="NavBar" bg="dark" variant={"dark"} expand="xxl">
         <Navbar.Brand href="#"><img src={logo} className="logo" alt="Logo Empresarial"/></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
