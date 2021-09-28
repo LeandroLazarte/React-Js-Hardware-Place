@@ -6,14 +6,14 @@ import CartWidget from "../cartWidget/CartWidget";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [isLoggedIn, setIsLoggedIn] = React.useState(false);
-  const handelClick = () => {
-    if (isLoggedIn === true) {
-      setIsLoggedIn(false);
-    } else {
-      setIsLoggedIn(true);
-    }
-  };
+  // const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+  // const handelClick = () => {
+  //   if (isLoggedIn === true) {
+  //     setIsLoggedIn(false);
+  //   } else {
+  //     setIsLoggedIn(true);
+  //   }
+  // };
   return (
     <Navbar className="NavBar" bg="dark" variant={"dark"} expand="xxl">
       <Link to="/">
@@ -48,8 +48,8 @@ const Header = () => {
               Registro
             </Nav.Link>
           </Link>
-          {isLoggedIn.toString()}
-          <button onClick={handelClick}>Cambiar estado</button>
+          {/* {isLoggedIn.toString()}
+          <button onClick={handelClick}>Cambiar estado</button> */}
         </Nav>
       </Navbar.Collapse>
       <CartWidget />

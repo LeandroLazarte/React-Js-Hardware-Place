@@ -1,0 +1,76 @@
+/**
+   * Sobre Nosotros
+   ---------------------------*/
+
+   .articulo__titulo {
+    margin-top: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 3em;
+    letter-spacing: normal;
+    color: cadetblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
+    text-align: center;
+}
+.banner{
+    width: 100%;
+    height: 100%;
+}
+
+@mixin div {
+    letter-spacing: normal;
+    text-align: center;
+    margin: 50px;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+@mixin imagen {
+    width: 50%;
+    border: 15px solid black;
+    height: 50%;
+}
+
+@mixin texto {
+    color: burlywood;
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+    padding: 10px;
+}
+
+.articulo__divUno {
+    @include div();
+}
+
+.articulo__imagenUno {
+    @include imagen();
+}
+
+.articulo__textUno {
+    @include texto();
+}
+
+.articulo__divDos {
+    @include div();
+}
+
+.articulo__imagenDos {
+    @include imagen();
+}
+
+.articulo__textDos {
+    @include texto();
+}
+
+.articulo__divTres {
+    @include div();
+}
+
+.articulo__imagenTres {
+    @include imagen();
+}
+
+.articulo__textTres {
+    @include texto();
+}

@@ -1,0 +1,83 @@
+/**
+   * Sobre Nosotros
+   ---------------------------*/
+.articulo__titulo {
+  margin-top: 20px;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 3em;
+  letter-spacing: normal;
+  color: cadetblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
+  text-align: center;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+}
+
+.articulo__divUno {
+  letter-spacing: normal;
+  text-align: center;
+  margin: 50px;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.articulo__imagenUno {
+  width: 50%;
+  border: 15px solid black;
+  height: 50%;
+}
+
+.articulo__textUno {
+  color: burlywood;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+}
+
+.articulo__divDos {
+  letter-spacing: normal;
+  text-align: center;
+  margin: 50px;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.articulo__imagenDos {
+  width: 50%;
+  border: 15px solid black;
+  height: 50%;
+}
+
+.articulo__textDos {
+  color: burlywood;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+}
+
+.articulo__divTres {
+  letter-spacing: normal;
+  text-align: center;
+  margin: 50px;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.articulo__imagenTres {
+  width: 50%;
+  border: 15px solid black;
+  height: 50%;
+}
+
+.articulo__textTres {
+  color: burlywood;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+}
+/*# sourceMappingURL=Nosotros.css.map */

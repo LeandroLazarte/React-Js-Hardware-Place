@@ -1,0 +1,81 @@
+/** ====================
+* Pie de Página
+=======================*/
+
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    color: white;
+    background-color: #212529;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style-type: none;
+    .container-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+        .aboutUs {
+            width: 15%;
+            margin-bottom: 30px;
+            h2 {
+                position: relative;
+                color: #fff;
+                font-weight: 500;
+                margin-bottom: 15px;
+                h2::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 50%;
+                    height: 2px;
+                    background: #fa0;
+                }
+            }
+        }
+    }
+}
+
+.titulo-footer {
+    text-decoration: underline;
+}
+
+.socialMedia {
+    display: flex;
+    flex-direction: column;
+    li {
+        margin-right: 10px;
+        margin-bottom: 20px;
+        a {
+            color: white;
+        }
+    }
+}
+
+.quickboton {
+    display: flex;
+    flex-direction: column;
+    margin-right: 290px;
+    list-style: disc;
+    ul {
+        li {
+            margin-bottom: 10px;
+            a {
+                color: white;
+            }
+        }
+    }
+}
+
+.contacto {
+    ul {
+        li {
+            margin-bottom: 10px;
+        }
+    }
+}
