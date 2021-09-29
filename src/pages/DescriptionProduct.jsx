@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { useQuery } from '../hooks/useQuery';
 import '../pages/DescriptionProduct.scss';
 import ItemCount from "../components/ItemCount/itemCount";
+import { Link } from "react-router-dom";
 
 const DescriptionProduct = () => {
     const [product, setProduct] = React.useState({});
@@ -38,7 +39,9 @@ const DescriptionProduct = () => {
                 <button>M</button>
                 <button>L</button>
                 <button>XL</button>
+                <Link to={"/Cart"}>
                 <button className="btn btn-danger">Finalizar Compra</button>
+                </Link>
             </div>
         )
     }

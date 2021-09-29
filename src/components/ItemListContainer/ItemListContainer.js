@@ -8,7 +8,6 @@ const ItemListContainer = () => {
 
   React.useEffect(() => {
     const url = "https://fakestoreapi.com/products?limit=6";
-
     fetch(url)
       .then((response) => {
         if (response.ok) {
