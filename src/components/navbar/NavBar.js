@@ -4,6 +4,7 @@ import "./NavBar.scss";
 import logo from "./Logo.png";
 import CartWidget from "../cartWidget/CartWidget";
 import { Link } from "react-router-dom";
+import {useCart} from "../context/CartContext";
 
 const Header = () => {
   // const [isLoggedIn, setIsLoggedIn] = React.useState(false);
@@ -14,6 +15,7 @@ const Header = () => {
   //     setIsLoggedIn(true);
   //   }
   // };
+  const {getQuantity} = useCart();
   return (
     <Navbar className="NavBar" bg="dark" variant={"dark"} expand="xxl">
       <Link to="/">
@@ -46,6 +48,12 @@ const Header = () => {
           <Link to="/registro">
             <Nav.Link className="link" href="#action5">
               Registro
+            </Nav.Link>
+          </Link>
+          <Link to="/cart">
+          {getQuantity()}
+            <Nav.Link className="link" href="#action6">
+              Carrito
             </Nav.Link>
           </Link>
           {/* {isLoggedIn.toString()}
