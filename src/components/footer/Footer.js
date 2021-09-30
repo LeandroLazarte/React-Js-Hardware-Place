@@ -16,7 +16,6 @@ const Footer = () => {
           <h2 className="titulo-footer">Redes Sociales</h2>
           <ul>
             <li>
-            
               <a href="https://www.facebook.com/">
                 <i className="fab fa-facebook-square fa-lg">Facebook</i>
               </a>
@@ -36,10 +35,18 @@ const Footer = () => {
         <div className="quickboton ">
           <h2 className="titulo-footer ">Informacion</h2>
           <ul>
-            {/* <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Políticas de privacidad</a></li>
-                    <li><a href="#">Ayuda</a></li>
-                    <li><a href="#">Términos y condiciones</a></li> */}
+            <li>
+              <a href="/">FAQ</a>
+            </li>
+            <li>
+              <a href="/">Políticas de privacidad</a>
+            </li>
+            <li>
+              <a href="/">Ayuda</a>
+            </li>
+            <li>
+              <a href="/">Términos y condiciones</a>
+            </li>
           </ul>
         </div>
         <div className="contacto ">

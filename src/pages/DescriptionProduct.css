@@ -1,5 +1,56 @@
-button {
-  margin: 10px;
-  padding: 1rem;
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content .image {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 20%;
+  height: 20%;
+  margin-top: 80px 10px;
+  border: 3px solid #a8806b;
+  padding: 10px;
+}
+
+.content .image .count {
+  margin-left: 10px;
+}
+
+.description {
+  margin-top: 10px;
+  font: 30px Arial, Helvetica, sans-serif;
+}
+
+.buttons {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 1px solid #000;
+  margin: 5px;
+  margin-bottom: 15px;
+}
+
+.buttons .btn {
+  border: 1px solid #000;
+  margin: 5px;
+  font-size: 20px;
+}
+
+.buttons .btn:hover {
+  color: #150b0e;
+  background-color: #b13126;
 }
 /*# sourceMappingURL=DescriptionProduct.css.map */
