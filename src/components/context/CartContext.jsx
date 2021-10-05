@@ -1,41 +1,76 @@
-import React from 'react';
+import React from "react";
 
 const CartContext = React.createContext([]);
 CartContext.displayName = "CartContext";
 
 export const CartProvider = ({ children }) => {
     const [cart, setCart] = React.useState([]);
-
-    const addItem = (item, quantity) => {
-        const newItem = { item, quantity }
-        setCart((prevState) => [...prevState, newItem])
+    
+    const addItem = (item) => {
+        if (!isInCart(item.id)) {
+            setCart([...cart, item]);
+        } else {
+            cart.forEach((product, index) => {
+                if (product.id === item.id) {
+                    cart[index].cantidad = product.cantidad + item.cantidad;
+                    setCart([...cart])
+                }
+            });
+        }
+    };
+    const isInCart = (id) => {
+        const isIqual = cart.find((product) => product.id === id);
+        return isIqual === undefined ? false : true;
     };
     const removeItem = (id) => {
-        //Eliminar product seleccionado
+        const deleteProduct = cart.filter((product) => product.id !== id);
+        setCart(deleteProduct);
     };
+
+    const finallyPrice = () => {
+        let total = 0;
+        cart.forEach(({ cantidad, price }) => {
+            total = total + cantidad * price;
+        });
+        return total;
+    };
+
     const clear = () => {
         setCart([]);
     };
-    const isInCart = (id) => {
-        //chequear si existe el producto con el id seleccionado.
-    };
-    const getQuantity = () =>{
+
+    const getQuantity = () => {
         let quantity = 0;
         cart.forEach((product) => {
-          quantity +=Number(product.quantity) ;
+            quantity += (product.cantidad);
         });
         return quantity;
-      }
-    const value = { cart, addItem, removeItem, clear, isInCart,getQuantity };
-    return (<CartContext.Provider value={value}>{children}</CartContext.Provider>)
+    }
+    const value = {
+        cart,
+        addItem,
+        removeItem,
+        clear,
+        isInCart,
+        finallyPrice,
+        getQuantity
+    };
+    return (
+        <CartContext.Provider
+            value={value}>
+            {children}
+        </CartContext.Provider>)
 };
 export const useCart = () => {
     const context = React.useContext(CartContext);
     if (!context) {
-        throw new Error('UseCart debe usarse desde dentro de un cart')
+        throw new Error('')
     };
     return context;
 };
+
+
+
 
 
 
