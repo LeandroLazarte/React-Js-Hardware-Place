@@ -1,21 +1,14 @@
 import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav, Badge } from "react-bootstrap";
 import "./NavBar.scss";
 import logo from "./Logo.png";
-import CartWidget from "../cartWidget/CartWidget";
 import { Link } from "react-router-dom";
-import {useCart} from "../context/CartContext";
+import { useCart } from "../context/CartContext";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
-  // const [isLoggedIn, setIsLoggedIn] = React.useState(false);
-  // const handelClick = () => {
-  //   if (isLoggedIn === true) {
-  //     setIsLoggedIn(false);
-  //   } else {
-  //     setIsLoggedIn(true);
-  //   }
-  // };
-  const {getQuantity} = useCart();
+  const { getQuantity } = useCart();
   return (
     <Navbar className="NavBar" bg="dark" variant={"dark"} expand="xxl">
       <Link to="/">
@@ -27,7 +20,7 @@ const Header = () => {
       <Navbar.Collapse id="navbarScroll">
         <Nav
           className="mr-auto my-2 my-lg-0"
-          style={{ maxHeight: "100px" }}
+          style={{ maxHeight: "300px" }}
           navbarScroll
         >
           <Link to="/">
@@ -51,16 +44,14 @@ const Header = () => {
             </Nav.Link>
           </Link>
           <Link to="/cart">
-          {getQuantity()}
             <Nav.Link className="link" href="#action6">
-              Carrito
+            <Badge bg="secondary">{getQuantity() ? getQuantity() : 0}</Badge>
+            <FontAwesomeIcon icon={faShoppingCart}/>
+            Carrito
             </Nav.Link>
           </Link>
-          {/* {isLoggedIn.toString()}
-          <button onClick={handelClick}>Cambiar estado</button> */}
         </Nav>
       </Navbar.Collapse>
-      <CartWidget />
     </Navbar>
   );
 };

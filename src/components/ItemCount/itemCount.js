@@ -1,8 +1,7 @@
 import React from 'react';
-import './item-count.scss'
+import './item-count.scss';
 
-const ItemCount = () =>{
-    const [counter, setCounter] = React.useState(1)
+const ItemCount = ({counter,setCounter}) =>{
     const handleClick = () =>{
         setCounter(counter + 1);
     };
@@ -12,7 +11,9 @@ const ItemCount = () =>{
     
     return(
     <div className="item-count">
-    <p className="count"> <button className="button" onClick={handleClick1}>-</button> {counter} <button className="button" onClick={handleClick}>+</button></p>
+    <button className="button" onClick={handleClick1}>-</button>
+    {counter}
+    <button className="button" onClick={handleClick}>+</button>
     </div>
     );
 };

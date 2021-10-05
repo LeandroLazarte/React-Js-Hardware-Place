@@ -4,12 +4,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./components/navbar/NavBar";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import {CartProvider} from './components/context/CartContext';
-import Cart from "./pages/Cart";
 import DescriptionProduct from "./pages/DescriptionProduct";
 import Home from "./pages/Home";
 import Nosotros from "./pages/Nosotros";
 import Contacto from "./pages/Contacto";
 import Registro from "./pages/Registro";
+import Carrito from "./pages/Cart";
 
 
 
@@ -19,7 +19,7 @@ const App = () => {
     <CartProvider>
       <NavBar />
       <Switch>
-        <Route path="/cart" component={Cart} />
+        <Route path="/cart" component={Carrito} />
         <Route path="/product/:id" component={DescriptionProduct} />
         <Route path="/nosotros" component={Nosotros} />
         <Route path="/contacto" component={Contacto} />

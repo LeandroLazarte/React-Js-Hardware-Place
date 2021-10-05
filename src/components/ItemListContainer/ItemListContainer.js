@@ -4,7 +4,6 @@ import Card from "../card/Card";
 
 const ItemListContainer = () => {
   const [data, setData] = React.useState([]);
-  //   const [loading, setLoad] = React.useState(false);
 
   React.useEffect(() => {
     const url = "https://fakestoreapi.com/products?limit=6";
@@ -23,10 +22,6 @@ const ItemListContainer = () => {
   }, []);
 
   console.log(data);
-
-  //   const buyProduct = (product) => {
-  //       console.log(`Se ha añadido al carrito ${product}` );
-  //   }
 
   return (
     <div style={{ display: "flex", justifyContent: "space-between" }}>

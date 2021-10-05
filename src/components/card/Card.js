@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 //   alert("Se ha añadido un producto al carrito");
 // };
 
-const Card = ({ id, image, title, description, price, productId }) => {
+const Card = ({ id, image, title, description, productId }) => {
   return (
     <div key={id} className="card-item">
       <img src={image} className="img-product" alt={title} />
