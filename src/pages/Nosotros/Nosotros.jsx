@@ -1,5 +1,5 @@
 import * as React from "react";
-import './Nosotros.scss'
+import './Nosotros.scss';
 
 const Nosotros = () => {
     return (

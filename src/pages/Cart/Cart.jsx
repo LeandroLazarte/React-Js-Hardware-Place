@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import { useCart } from '../components/context/CartContext';
+import { useCart } from '../../components/context/CartContext';
 import { useHistory } from 'react-router';
 import { Row, Card } from 'react-bootstrap';
+import './cart.scss';
 
 const Carrito = () => {
     const { cart, finallyPrice } = useCart();

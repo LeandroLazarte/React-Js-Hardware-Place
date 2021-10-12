@@ -12,8 +12,10 @@ const Card = ({ id, image, title, description, productId }) => {
       <img src={image} className="img-product" alt={title} />
       <div className="card-body">
         <p>{title}</p>
+        <div >
         <p>Descripción</p>
         <p>{description}</p>
+        </div>
       </div>
       <Link to={`/product/${productId}`}>
         <button className="btn btn-danger">Ver Producto</button>
