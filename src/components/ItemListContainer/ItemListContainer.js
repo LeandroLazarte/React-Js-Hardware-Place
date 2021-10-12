@@ -1,15 +1,16 @@
 import React from "react";
 import "./ItemListContainer.scss";
 import Card from "../card/Card";
-import { getFirestore } from "../firebase";
+import { getFirestore } from "../../firebase/index";
 
 
 const ItemListContainer = () => {
   const [data, setData] = React.useState([]);
 
-  React.useEffect(() => {
+ React.useEffect(() => {
     const dataBase = getFirestore();
-    const productsColecction = dataBase.collection("Products");
+    const productsColecction = dataBase.collection("Products")
+    .orderBy("id","asc");
     console.log(
       productsColecction
         .get()
@@ -18,9 +19,9 @@ const ItemListContainer = () => {
             console.log("No hay productos");
           } else {
             setData(
-              querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+              querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data()}))
             );
-          }
+          };
         })
         .catch(() => {})
         .finally(() => {})
@@ -28,38 +29,21 @@ const ItemListContainer = () => {
   }, []);
 
   return (
-    <div style={{ display: "flex", justifyContent: "space-between" }}>
+    <div className="card d-inline-flex p-2">
       {data.map((product) => {
         return (
           <Card
-            key={product.id}
             productId={product.id}
             image={product.image}
             title={product.title}
             description={product.description}
-            category={product.category}
-            price={product.price}
           />
         );
       })}
     </div>
-  );
+  )
 };
 
 export default ItemListContainer;
 
-// React.useEffect(() => {
-//   const url = "https://fakestoreapi.com/products?limit=6";
-//   fetch(url)
-//     .then((response) => {
-//       if (response.ok) {
-//         return response.json();
-//       } else {
-//         throw response;
-//       }
-//     })
-//     .then((data) => setData(data))
-//     .catch((error) =>
-//       console.log(`Hubo un error inesperado ${error.status}`)
-//     );
-// }, []);
+
