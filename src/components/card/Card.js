@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Card = ({ id, image, title, description, productId }) => {
   return (
-    <div key={id} className="card-item">
+    <div key={id} className="card ">
       <img src={image} className="img-product" alt={title} />
       <div className="card-body">
         <p>{title}</p>

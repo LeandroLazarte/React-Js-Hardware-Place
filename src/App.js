@@ -13,23 +13,23 @@ import Carrito from "./pages/Cart/Cart";
 
 
 
-const App = () => {
+function App() {
   return (
     <BrowserRouter>
-    <CartProvider>
-      <NavBar />
-      <Switch>
-        <Route path="/cart" component={Carrito} />
-        <Route path="/product/:id" component={DescriptionProduct} />
-        <Route path="/nosotros" component={Nosotros} />
-        <Route path="/contacto" component={Contacto} />
-        <Route path="/registro" component={Registro} />
-        <Route path="/" component={Home} />
-      </Switch>
+      <CartProvider>
+        <NavBar />
+        <Switch>
+          <Route path="/cart" component={Carrito} />
+          <Route path="/product/:id" component={DescriptionProduct} />
+          <Route path="/nosotros" component={Nosotros} />
+          <Route path="/contacto" component={Contacto} />
+          <Route path="/registro" component={Registro} />
+          <Route path="/" component={Home} />
+        </Switch>
       </CartProvider>
     </BrowserRouter>
-   
+
   );
-};
+}
 
 export default App;

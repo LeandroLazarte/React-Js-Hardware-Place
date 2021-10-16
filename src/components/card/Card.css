@@ -11,7 +11,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 25%;
+  width: 60%;
 }
 
 img {
@@ -20,9 +20,6 @@ img {
 }
 
 .card-item {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-top: 15px;
   border: 1px solid black;
   margin-bottom: 5px;

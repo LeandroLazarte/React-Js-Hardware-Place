@@ -25,11 +25,11 @@ const Carrito = () => {
         <Row>
             {cart.map((product) => (
                 <Card width={300} height={300}>
-                    <div key={product.id} className="content">
+                    <div key={product?.id} className="content">
                         <h1>{product?.title}</h1>
                         <img style={{ width: '300px', height: '300px' }} className="image" src={product?.image} alt="producto" />
                         <p style={{ fontSize: '20px' }} className="description"> Detalle: {product?.description}</p>
-                        <p className="description">Precio: ${product?.price}</p>
+                        <p className="description">Precio: $ {product?.price}</p>
                         <p className="description">Cantidad:{product?.cantidad}</p>
                     </div>
                 </Card>
