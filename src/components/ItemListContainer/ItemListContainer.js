@@ -29,7 +29,6 @@ const ItemListContainer = () => {
         .finally(() => setLoading(false))
     );
   }, []);
-
   if (loading) {
     return <p>Cargando Sitio...</p>;
   } else {
@@ -38,6 +37,7 @@ const ItemListContainer = () => {
         <div
           style={{
             display: "flex",
+            flexDirection: "row",
             justifyContent: "space-evenly",
             flexWrap: "wrap",
           }}
@@ -49,12 +49,14 @@ const ItemListContainer = () => {
                 image={product.image}
                 title={product.title}
                 description={product.description}
+                category={product.category}
               />
             );
           })}
         </div>
       </div>
     );
+    
   }
 };
 

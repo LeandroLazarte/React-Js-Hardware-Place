@@ -6,15 +6,15 @@ import { Link } from "react-router-dom";
 //   alert("Se ha añadido un producto al carrito");
 // };
 
-const Card = ({ id, image, title, description, productId }) => {
+const Card = ({ id, category, image, title, description, productId }) => {
   return (
     <div key={id} className="card ">
       <img src={image} className="img-product" alt={title} />
       <div className="card-body">
         <p>{title}</p>
-        <div >
-        <p>Descripción</p>
-        <p>{description}</p>
+        <p>{category}</p>
+        <div>
+          <p>Descripción: {description}</p>
         </div>
       </div>
       <Link to={`/product/${productId}`}>
