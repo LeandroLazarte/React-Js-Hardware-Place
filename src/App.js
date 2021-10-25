@@ -2,6 +2,7 @@ import React from "react";
 import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./components/navbar/NavBar";
+import 'antd/dist/antd.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { ShoppingContext } from "./components/context/CartContext";
 import DescriptionProduct from "./pages/details/DescriptionProduct";
@@ -13,8 +14,8 @@ import Cart from "./pages/Cart/Cart";
 
 function App() {
   return (
+    <ShoppingContext>
     <BrowserRouter>
-      <ShoppingContext>
         <NavBar />
         <Switch>
           <Route path="/cart" component={Cart} />
@@ -24,8 +25,8 @@ function App() {
           <Route path="/registro" component={Registro} />
           <Route path="/" component={Home} />
         </Switch>
-      </ShoppingContext>
     </BrowserRouter>
+    </ShoppingContext>
   );
 }
 

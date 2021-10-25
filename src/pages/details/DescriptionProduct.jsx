@@ -10,34 +10,35 @@ const Description = () => {
     const [dataProduct, setDataProduct] = React.useState([]);
     const [oneProduct, setOneProduct] = React.useState([]);
     const [loading, setLoading] = React.useState(false);
-    const [counter, setCounter] = React.useState(1);
+    const [counter, setCounter] = React.useState(0);
     const { AddCart } = useCart();
     const { id } = useParams();
     let story = useHistory();
     console.log(oneProduct);
 
     const addCount = () => {
-        if (counter < dataProduct[0]?.rating) {
+        if (counter < oneProduct[0]?.stock) {
             const value = counter + 1;
             setCounter(value);
         } else {
             message.warning("Ha llegado al limite");
         }
     };
-    
+
     const deleteCount = () => {
         if (counter > 0) {
             const value = counter - 1;
             setCounter(value);
         }
     };
-    
-    const addData = () => {
-        const takeData = { ...dataProduct[0], amount: counter };
+
+    const handleAddData = () => {
+        const takeData = { ...oneProduct[0], amount: counter };
         AddCart(takeData);
         message.success("Se ha agregado el producto", 3);
         story.push("/cart");
     };
+   
 
     React.useEffect(() => {
         const getProduct = async () => {
@@ -103,6 +104,7 @@ const Description = () => {
                     </Divider>
                     <Divider>
                         <h3>{`Precio: $${oneProduct[0]?.price}`}</h3>
+                        <h3>{`Stock: ${oneProduct[0]?.stock}`}</h3>
                         <h3>{`Cantidad: ${counter}`}</h3>
                     </Divider>
                     <ItemCount addCount={addCount} deleteCount={deleteCount} />
@@ -111,7 +113,7 @@ const Description = () => {
                             <Button
                                 icon={<ShoppingOutlined />}
                                 type="primary"
-                                onClick={addData}>
+                                onClick={handleAddData}>
                                 Agregar al carrito
                             </Button>
                         )}

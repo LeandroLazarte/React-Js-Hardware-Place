@@ -57,9 +57,9 @@ const Cart = () => {
         <Row gutter={[16, 16]}>
             <Col span={24} lg={{ span: 12 }}>
                 <Row justify="end">
-                <Button>
+                <Button
                 onClick={openNotification}
-                Borrar todo el carrito
+                >Borrar todo el carrito
                 </Button>
                 </Row>
                 <div style={{marginTop: 20}}>
@@ -99,6 +99,6 @@ const Cart = () => {
                 </div>
             ))}
         </Row>
-    )
-}
+    );
+};
 export default Cart;

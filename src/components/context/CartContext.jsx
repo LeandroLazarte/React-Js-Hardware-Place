@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const CartContexto = React.createContext();
 
@@ -11,7 +11,7 @@ export const ShoppingContext = ({ children }) => {
 
     const AddCart = (item) => {
         if (!isInCart(item.id)) {
-            setCart(...cart, item);
+            setCart([...cart, item]);
         } else {
             cart.forEach((product, index) => {
                 if (product.id === item.id) {
@@ -19,8 +19,8 @@ export const ShoppingContext = ({ children }) => {
                     setCart([...cart]);
                 }
             });
-        }
-    }
+        };
+    };
 
     const isInCart = (id) => {
         const isEqual = cart.find((product) => product.id === id);
