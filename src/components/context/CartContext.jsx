@@ -1,72 +1,61 @@
-import React from "react";
+import React from "react"
 
-const CartContext = React.createContext([]);
-CartContext.displayName = "CartContext";
+const CartContexto = React.createContext();
 
-export const CartProvider = ({ children }) => {
+export const useCart = () => {
+    return React.useContext(CartContexto);
+}
+
+export const ShoppingContext = ({ children }) => {
     const [cart, setCart] = React.useState([]);
-    
-    const addItem = (item) => {
+
+    const AddCart = (item) => {
         if (!isInCart(item.id)) {
-            setCart([...cart, item]);
+            setCart(...cart, item);
         } else {
             cart.forEach((product, index) => {
                 if (product.id === item.id) {
-                    cart[index].cantidad = product.cantidad + item.cantidad;
-                    setCart([...cart])
+                    cart[index].amount = product.amount + item.amount;
+                    setCart([...cart]);
                 }
             });
         }
-    };
+    }
+
     const isInCart = (id) => {
-        const isIqual = cart.find((product) => product.id === id);
-        return isIqual === undefined ? false : true;
-    };
-    const removeItem = (id) => {
-        const deleteProduct = cart.filter((product) => product.id !== id);
-        setCart(deleteProduct);
+        const isEqual = cart.find((product) => product.id === id);
+        return isEqual === undefined ? false : true;
     };
 
-    const finallyPrice = () => {
+    const removeItemArr = (id) => {
+        const quitProduct = cart.filter((product) => product.id !== id);
+        setCart(quitProduct)
+    };
+
+    const CalculatePrice = () => {
         let total = 0;
-        cart.forEach(({ cantidad, price }) => {
-            total = total + cantidad * price;
+        cart.forEach(({ amount, price }) => {
+            total = total + amount * price;
         });
         return total;
     };
 
-    const clear = () => {
+    const deleteCart = () => {
         setCart([]);
-    };
-
-    const getQuantity = () => {
-        let quantity = 0;
-        cart.forEach((product) => {
-            quantity += (product.cantidad);
-        });
-        return quantity;
     }
-    const value = {
-        cart,
-        addItem,
-        removeItem,
-        clear,
-        isInCart,
-        finallyPrice,
-        getQuantity
-    };
+
     return (
-        <CartContext.Provider
-            value={value}>
+        <CartContexto.Provider
+            value={{
+                cart,
+                AddCart,
+                removeItemArr,
+                CalculatePrice,
+                deleteCart
+            }}>
             {children}
-        </CartContext.Provider>)
-};
-export const useCart = () => {
-    const context = React.useContext(CartContext);
-    if (!context) {
-        throw new Error('')
-    };
-    return context;
+        </CartContexto.Provider>
+    );
 };
 
 

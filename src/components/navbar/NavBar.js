@@ -8,7 +8,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
-  const { getQuantity } = useCart();
+  const { cart } = useCart();
   return (
     <Navbar className="NavBar" bg="dark" variant={"dark"} expand="xxl">
       <Link to="/">
@@ -43,9 +43,9 @@ const Header = () => {
               Registro
             </Nav.Link>
           </Link>
-          <Link to="/cart">
+          <Link to="/carrito">
             <Nav.Link className="link" href="#action6">
-            <Badge bg="secondary">{getQuantity() ? getQuantity() : 0}</Badge>
+            <Badge bg="secondary">{cart ? cart : null}</Badge>
             <FontAwesomeIcon icon={faShoppingCart}/>
             Carrito
             </Nav.Link>

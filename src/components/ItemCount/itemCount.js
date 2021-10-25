@@ -1,21 +1,16 @@
 import React from 'react';
-import './item-count.scss';
+import {Row, Col, Button} from "antd";
+import {PlusOutlined, MinusOutlined} from "@ant-design/icons";
 
-const ItemCount = ({counter,setCounter}) =>{
-    const handleClick = () =>{
-        setCounter(counter + 1);
-    };
-    const handleClick1 = () =>{
-        setCounter(counter - 1);
-    };
-    
+const ItemCount = ({addCount, deleteCount}) =>{
     return(
-    <div className="item-count">
-    <button className="button" onClick={handleClick1}>-</button>
-    {counter}
-    <button className="button" onClick={handleClick}>+</button>
-    </div>
-    );
+        <Row>
+            <Col>
+                <Button icon={<PlusOutlined style={{color:'#2DE7B2'}}/>}onClick={addCount}>Agregar</Button>
+                <Button icon={<MinusOutlined style={{color:'#FF001A'}}/>}onClick={deleteCount}>Quitar</Button>
+            </Col>
+        </Row>
+    )
 };
 
 export default ItemCount;
