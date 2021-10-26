@@ -11,11 +11,11 @@ const Description = () => {
     const [oneProduct, setOneProduct] = React.useState([]);
     const [loading, setLoading] = React.useState(false);
     const [counter, setCounter] = React.useState(0);
-    const {AddCart} = UseCart();
+    const { AddCart } = UseCart();
     const { id } = useParams();
     let story = useHistory();
     console.log(oneProduct);
-    const styles = {listStyleType: 'none'}
+    const styles = { listStyleType: 'none', fontFamily:'roboto' }
 
     const addCount = () => {
         if (counter < oneProduct[0]?.stock) {
@@ -39,7 +39,7 @@ const Description = () => {
         message.success("Se ha agregado el producto", 3);
         story.push("/cart");
     };
-   
+
 
     React.useEffect(() => {
         const getProduct = async () => {
@@ -91,15 +91,15 @@ const Description = () => {
                 <div style={{ marginTop: 20 }}>
                     <Image
                         style={{ objectFit: "scale-down", alingItems: "center" }}
-                        width={300}
-                        height={300}
+                        width={500}
+                        height={500}
                         src={oneProduct[0]?.image}
                     />
                 </div>
             </Col>
             <Col style={styles} span={24} lg={{ span: 12 }}>
                 <div style={{ marginTop: 20 }}>
-                    <h1>{oneProduct[0]?.title}</h1>
+                    <h1 style={{textAlign: "center"}}>{oneProduct[0]?.title}</h1>
                     <Divider>
                         <h3>{oneProduct[0]?.description}</h3>
                     </Divider>
