@@ -2,7 +2,7 @@ import React from "react";
 
 const CartContexto = React.createContext();
 
-export const useCart = () => {
+export const UseCart = () => {
     return React.useContext(CartContexto);
 }
 
