@@ -33,12 +33,13 @@ const ItemListContainer = () => {
     return <p>Cargando Sitio...</p>;
   } else {
     return (
-      <div style={{ maxWidth: "800px", marginInLine: "auto" }}>
+      <div>
         <div
           style={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-evenly",
+            justifyContent: "center",
+            alignItems: "center",
             flexWrap: "wrap",
           }}
         >
