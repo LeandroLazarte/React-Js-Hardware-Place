@@ -1,13 +1,12 @@
 import * as React from "react";
 import './Nosotros.scss';
+import Footer from '../../components/footer/Footer';
 
 const Nosotros = () => {
     return (
         <div>
             {/* <!-- banner --> */}
-            <div>
                 <img className="banner" src="../assets/ImagesNosotros/aorus.png" alt="Banner" />
-            </div>
             {/* <!-- Sobre Nosotros --> */}
             <div className="articulo">
                 <h1 className="articulo__titulo">Historia de la empresa</h1>
@@ -28,12 +27,10 @@ const Nosotros = () => {
                     de clientes aún más y fortalecer la presencia en la zona.</p>
                 </div>
             </div>
-
-        </div>
+            <Footer/>
+        </div>  
     )
-
-
-
 }
+
 
 export default Nosotros;
