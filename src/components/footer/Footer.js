@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.scss";
+import {FacebookOutlined,InstagramOutlined,YoutubeOutlined   } from '@ant-design/icons'
 
 const Footer = () => {
   return (
@@ -17,17 +18,17 @@ const Footer = () => {
           <ul>
             <li>
               <a href="https://www.facebook.com/">
-                <i className="fab fa-facebook-square fa-lg">Facebook</i>
+                <FacebookOutlined /> Facebook
               </a>
             </li>
             <li>
               <a href="https://www.instagram.com/">
-                <i className="fab fa-instagram-square fa-lg">Instagram</i>
+              <InstagramOutlined /> Instagram
               </a>
             </li>
             <li>
               <a href="https://www.youtube.com/">
-                <i className="fab fa-youtube-square fa-lg">Youtube</i>
+              <YoutubeOutlined /> Youtube
               </a>
             </li>
           </ul>

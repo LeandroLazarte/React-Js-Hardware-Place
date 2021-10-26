@@ -60,6 +60,7 @@ footer .container-footer .aboutUs h2 h2::before {
 
 .titulo-footer {
   text-decoration: underline;
+  color: #fff;
 }
 
 .socialMedia {
@@ -89,7 +90,7 @@ footer .container-footer .aboutUs h2 h2::before {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 290px;
+  margin-right: 315px;
   list-style: disc;
 }
 
