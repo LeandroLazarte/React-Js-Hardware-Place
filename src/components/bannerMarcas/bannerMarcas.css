@@ -1,0 +1,32 @@
+.Marcas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+  list-style-type: none;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 1px solid #000;
+}
+
+.Marcas .tituloM {
+  margin: 20px;
+  font-size: 30px;
+  color: black;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 50px;
+  text-decoration: none;
+}
+
+.Marcas .tituloM .marca_w {
+  margin-right: 55px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  background: white;
+}
+/*# sourceMappingURL=bannerMarcas.css.map */

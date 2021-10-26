@@ -1,0 +1,22 @@
+.Marcas {
+    display: flex;
+    justify-content: center;
+    background: white;
+    list-style-type: none;
+    margin-top: 50px;
+    margin-bottom:50px;
+    border: 1px solid #000;
+    .tituloM {
+        margin: 20px;
+        font-size: 30px;
+        color: black;
+        align-items: flex-start;
+        margin-top: 50px;
+        text-decoration: none;
+        .marca_w {
+            margin-right: 55px;
+            flex-wrap: nowrap;
+            background: white;
+        }
+    }
+}
