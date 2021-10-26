@@ -2,36 +2,32 @@
   margin-top: 30px;
   margin-bottom: 10px;
   display: flex;
-  flex-direction:row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 60%;
+  list-style-type: none;
 }
 
-img{
-  height: 250px;
-  width: 250px;
+img {
+  height: 300px;
+  width: 320px;
 }
+
 .card-item {
+  display: flex;
+  flex-direction: row;
   margin-top: 15px;
-  border: 1px solid black;
   margin-bottom: 5px;
-  padding: 8px;
+  padding: 20px;
   text-align: center;
   font-family: "Barlow", sans-serif;
   font-size: 17px;
   padding: 20px;
   color: chocolate;
+  border: 1px solid #000;
 }
 
-.img-product{
-    border: 1px solid #000;
+.img-product {
+  border: 1px solid #000;
 }
-
-.button {
-position:fixed;
-  padding: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-}
-
-
