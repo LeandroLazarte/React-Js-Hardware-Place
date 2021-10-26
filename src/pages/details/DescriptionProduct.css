@@ -12,6 +12,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  list-style-type: none;
 }
 
 .content .image {
@@ -31,6 +32,7 @@
   margin-top: 100px;
   font: 20px Arial, Helvetica, sans-serif;
   width: 20%;
+  list-style-type: none !important;
 }
 
 .buttons {

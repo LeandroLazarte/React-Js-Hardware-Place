@@ -2,7 +2,7 @@ import React from "react";
 import { ShoppingOutlined } from "@ant-design/icons";
 import { useParams, useHistory } from "react-router";
 import ItemCount from "../../components/ItemCount/itemCount";
-import { useCart } from "../../components/context/CartContext";
+import { UseCart } from "../../components/context/CartContext";
 import { getFirestore } from "../../firebase/index";
 import { Row, Col, message, Divider, Button, Image } from "antd";
 
@@ -11,10 +11,11 @@ const Description = () => {
     const [oneProduct, setOneProduct] = React.useState([]);
     const [loading, setLoading] = React.useState(false);
     const [counter, setCounter] = React.useState(0);
-    const { AddCart } = useCart();
+    const {AddCart} = UseCart();
     const { id } = useParams();
     let story = useHistory();
     console.log(oneProduct);
+    const styles = {listStyleType: 'none'}
 
     const addCount = () => {
         if (counter < oneProduct[0]?.stock) {
@@ -96,7 +97,7 @@ const Description = () => {
                     />
                 </div>
             </Col>
-            <Col span={24} lg={{ span: 12 }}>
+            <Col style={styles} span={24} lg={{ span: 12 }}>
                 <div style={{ marginTop: 20 }}>
                     <h1>{oneProduct[0]?.title}</h1>
                     <Divider>
