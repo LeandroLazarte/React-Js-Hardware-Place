@@ -1,6 +1,6 @@
 import React from "react";
 import "./ItemListContainer.scss";
-import Card from "../card/Card";
+import Cards from "../card/Card";
 import { getFirestore } from "../../firebase/index";
 
 const ItemListContainer = () => {
@@ -11,7 +11,7 @@ const ItemListContainer = () => {
     setLoading(true);
     const dataBase = getFirestore();
     const productsColecction = dataBase
-      .collection("Products") //.where('price', '>=', "100000")
+      .collection("Products")
       .orderBy("id", "asc");
     console.log(
       productsColecction
@@ -44,7 +44,7 @@ const ItemListContainer = () => {
         >
           {data.map((product) => {
             return (
-              <Card
+              <Cards
                 productId={product.id}
                 image={product.image}
                 title={product.title}
@@ -56,7 +56,6 @@ const ItemListContainer = () => {
         </div>
       </div>
     );
-    
   }
 };
 
