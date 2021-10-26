@@ -1,14 +1,13 @@
 import React from 'react';
-import { useCart } from '../../components/context/CartContext';
+import { UseCart } from '../../components/context/CartContext';
 import { useHistory } from 'react-router';
 import { Row, Card, Col, Image, Button, Popconfirm, message, notification } from 'antd';
-
 import './cart.scss';
 
 const { Meta } = Card;
 
 const Cart = () => {
-    const { cart, removeItemArr, CalculatePrice, deleteCart } = useCart();
+    const { cart, removeItemArr, CalculatePrice, deleteCart } = UseCart();
 
     let story = useHistory();
 
@@ -18,7 +17,7 @@ const Cart = () => {
 
     React.useEffect(() => {
         if (cart.length === 0) {
-            story.push("/");
+            story.push("/cart");
         }
     }, [cart, story]);
 
@@ -40,7 +39,7 @@ const Cart = () => {
                 size="small"
                 onClick={() => deleteAllProduct(key)}
             >
-            Confirmar Compra
+            Borrar Productos
             </Button>
         );
         notification.open({
