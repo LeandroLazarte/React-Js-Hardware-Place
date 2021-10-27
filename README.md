@@ -1,5 +1,18 @@
 # Hardware-Place---Proyecto-Final---Coderhouse---Leandro-Lazarte
 
+*Sitio web para la compra de componentes de computadoras y otros periféricos.
+
+/Funcionamiento del sitio/
+
+Se simula un sito web para la compra de articulos y periféricos de computadoras. Se puede apreciar en el inicio los productos a vender, con su respectiva descripcion y un botón para poder añadir el producto deseado por el cliente. Una vez que el cliente seleccione el/los productos seleccionados, va a poder chequear los productos que tiene en el carrito con sus especificaciones y cantidad que desea comprar.
+El sitio cuenta con tres secciones adicionales : "Sobre Nosotros", "contacto", "Carrito".
+"Sobre Nosotros": Cuenta brevemente la historia de la empresa.
+"Contacto": Para poder ver las preguntas frecuentes y despejar las dudas que pueda a llegar a tener el cliente.
+"Registrar": Una sección donde el usuario puede registrarse para obtener una cuenta y queda logueado en el sitio.
+/Carrito de Compras/ 1 - Se generauna base de datos en Firebase para obtener los productos mediante React Js. 
+2 - Se crean varios archivos.jsx() donde administrara el funcionamiento principal del carrito de compras.
+3 - El usuario podra navegar por el sitio para realizar una compra satisfactoria.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
