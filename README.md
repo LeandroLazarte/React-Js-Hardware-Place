@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Hardware-Place---Proyecto-Final---Coderhouse---Leandro-Lazarte
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
