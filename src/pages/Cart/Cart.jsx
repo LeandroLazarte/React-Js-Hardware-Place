@@ -61,7 +61,7 @@ const Cart = () => {
     return (
         <Row style={styles} gutter={[16, 16]} >
             <Col span={24} lg={{ span: 12 }}>
-                <Row justify="end">
+                <Row justify="end" >
                     <Button type="danger" onClick={openNotification}>
                         Borrar todo el carrito
                     </Button>
@@ -87,14 +87,19 @@ const Cart = () => {
                     >
                         {cart.map((product) => (
                             <>
-                            <h1>¡Felicidades! Su compra se realizo con éxito</h1>
+                                <div key={product.id}>
+                                <h1>¡Felicidades! Su compra se realizo con éxito</h1>
+                                <div>
                                 <Meta title={product.title} />
                                 <img src={product.image} alt="" />
                                 <p>{`Precio: $${product.price}`}</p>
                                 <p>{`Cantidad: ${product.amount}`}</p>
                                 <p>{`Total: $${(product.amount * product.price)}`}</p>
+                                <h3>{`Total a pagar: $${CalculatePrice()}`}</h3>
+                                </div>
                                 <h2>Se le enviara un correo a su E-mail con los detalles de la compra</h2>
-                                <h3>Gracias por confiar en nosotros <SmileTwoTone /></h3> 
+                                <h3>Gracias por confiar en nosotros <SmileTwoTone /></h3>
+                                </div>
                             </>
                         ))}
                     </Modal>
